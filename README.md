@@ -9,9 +9,12 @@ import random
 
 class Car():
     def __init__(self, name, finsh_lane_distance):
+
         self.position = 0
         self.name = name
         self.finsh_lane_distance = finsh_lane_distance
+
+
 
     def move(self):
         self.position += self.update()
@@ -31,6 +34,10 @@ class Car():
 
 
 
+
+
+
+
 class Race():
     def __init__(self, car_obj):
         self.car_obj = car_obj
@@ -45,7 +52,9 @@ class Race():
         os.system('cls' if os.name == 'nt' else 'clear')
         print("Car race simulation:")
 
+
         for car1 in self.car_obj:
+
             car1.move()
             print(f"{car1.getName()}: {'-' * car1.getPosition()} ({car1.getPosition()})")
 
